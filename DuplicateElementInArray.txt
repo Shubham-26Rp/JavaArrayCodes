@@ -1,16 +1,30 @@
+import java.util.*;
 public class Main
 {
 	public static void main(String[] args) {
-	  int arr[] =new int[]{1,2,3,4,6,7,8,8,9};
-	  for(int i=0;i<arr.length;i++)
+	  int n;
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("Enter the number of element you want to store");
+	  n=sc.nextInt();
+	  int[] arr=new int[n];
+	  for(int i=0;i<n;i++)
 	  {
-	      for(int j=i+1;j<arr.length;j++){
-	          if(arr[i]==arr[j])
-	          {
-	              arr[i]=arr[j];
-	              System.out.println(arr[i]);
-	          }
-	      }
+	      arr[i]=sc.nextInt();
 	  }
-	}
+	 System.out.println("Array Elements are :");
+	 for(int i=0;i<n;i++){
+	  System.out.println(arr[i]);
+	 }
+	 for(int i=0;i<arr.length;i++){
+	     for(int j=i+1;j<arr.length;j++){
+	     if(arr[i]==arr[j]){
+	         arr[i]=arr[j];
+	         System.out.println("Duplicate Elements:"+arr[i]);
+	     }
+	     else{
+	         System.out.println("No Duplicate Element");
+	     }
+	 }
+}
+}
 }
