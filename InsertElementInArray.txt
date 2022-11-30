@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int n,pos,element;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the size of array :");
+	n=sc.nextInt();
+	int[] arr=new int[n];
+	for(int i=0;i<n;i++){
+	    arr[i]=sc.nextInt();
+	}
+	System.out.println("Array Elements are: ");
+	for(int i=0;i<n;i++){
+	    System.out.println(arr[i]+" ");
+	}
+	System.out.println("Enter the Position where you want to insert element in Array :");
+	pos=sc.nextInt();
+	System.out.println("Enter the Element you want to insert in  array :");
+	element=sc.nextInt();
+	for(int i=arr.length-1;i>pos-1;i--){
+	    arr[i]=arr[i-1];
+	}
+	arr[pos-1]=element;
+	System.out.println("Array Elements after insertion: ");
+	for(int i=0;i<arr.length;i++){
+	    System.out.print(arr[i]+" ");
+	}
+	}
+}
